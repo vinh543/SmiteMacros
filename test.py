@@ -3,7 +3,8 @@ from pynput.keyboard import Key, Controller
 
 keyboard2 = Controller()
 
-def on_activate_h():
+def on_activate1():
+    #print('Global hotkey activated!')
     #print('Global hotkey activated!')
     keyboard2.press('v')
     keyboard2.release('v')
@@ -13,7 +14,8 @@ def on_activate_h():
     keyboard2.release('l')
 
 
-def on_activate_i():
+def on_activate2():
+    #print('Global hotkey activated!')
     #print('Global hotkey activated!')
     keyboard2.press('v')
     keyboard2.release('v')
@@ -37,6 +39,6 @@ def for_canonical(f):
 #    l.join()
 
 with keyboard.GlobalHotKeys({
-        '<space>': on_activate_h,
-        'p': on_activate_i}) as h:
+        '<space>': on_activate1,
+        'p': on_activate2}) as h:
     h.join()
